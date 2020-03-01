@@ -1,0 +1,64 @@
+<!--닷 타입을 사용하면서 구글 크롬으로 하여금 이 문서가 html이라는 것을 알려 줌-->
+<!--닷 타입은 셀프 콘테인드 태그, 스스로 닫는다. 그 자체로 정보를 제공하기 때문에.-->
+<!DOCTYPE html>
+<html>
+<!--문서는 크게 두 가지 부문으로 나뉨-->
+<head>
+    <!--head is not for the user just fromation browser about website-->
+    <!--meta tag means extra infomation.-->
+    <!--'charset' means character encoding, basicly we want utf-8(언어) character encoding -->
+    <meta charset="utf-8"> <!--잘못하면 물음표 나옴-->
+    <!--여러 가지 종류의 메타 태그가 있음. 어떤 것은 트위터, 네이버 등 특정 플래폼만을 위해 존재함.-->
+    <meta name="author" content="Nomad Coders"><!--사이트 저작자-->
+    <meta name="description" content="welcome to my kakao clone">
+    <meta name="keywords" content="HTML, CSS, JS"><!--키워드-->
+    <!--메타 네임/구글에 오렌지 검색해서 나오는 웹사이트 밑에 간략하게 나오는 설명글. 그게 메타 내용임.-->
+    <title>This is my title</title>
+    <!--title is website headline-->
+</head>
+<body>
+<!--content is here-->
+
+    <!--기본 정의-->
+    <!-- <이름 속성="값">내용</이름> -->
+    <name attribute="value">Content</name>
+    <human gender="Female">Human🤦‍♀️</human>
+    <dog breed="german-shepard">dog🐶</dog>
+    
+    <title>This is the title of the document</title>
+    <a href="http://google.com" target="_blank">go to google</a>
+    <!-- attribute(속성)을 활용한 a href(링크) 사용하기 -->
+
+    <!--h1(head No.1)means big title, we have h1~h6 title-->
+    <!--semantic === means something, non semantic is not--> 
+    <!--semantic tag-->
+    <!--주로 시멘틱 태그를 사용-->
+    <h1>This is my big title</h1>
+    <section>this is an important section</section>
+    <article>항목</article>
+    <header></header>
+    <h6>This is my small title</h6>
+     <!--non semantic // 박스, 컨테이너 같은 것이 필요할 때 div 사용-->
+     <!--div is box span is text(for box)-->
+    <div>whatever (block)</div>
+    <span>short</span>
+    <!--div가 많으면 헷갈리기 때문에 각 div가 무엇을 뜻하는지 알려 줄 필요가 있음-->
+    <!--섹션 안의 있는 헤더와 디브 안에 있는 헤더의 구분을 짓기 위해 이름을 넣음-->
+    <!--css할 때 다른 명령을 내려야 하므로 엄청엄청매우 중요하다-->
+    <section>
+        <div>
+    <!--id is only. like passport. but class is not. like name 'jinyeong'.-->
+    <!--class use to same attribute (ex.댓글창)-->
+            <header id="headerNumberOne" class="defaultHeader">
+                <h1>TITLE OF A SECTION</h1>
+            </header>
+        </div>
+    </section>
+
+    <div>
+        <header id="differentHeader" class="defaultHeader">
+            TITLE OF THE UNKNOWN CONTAINER
+        </header>
+    </div>
+</body>
+</html>
