@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        body,html{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            /*이걸 따로 설정하는 이유? 브라우저가 갖고 있는 디폴트 값을 상쇄시키려고*/
+        }
+        body{
+            height: 400%;
+            background-color:#c0392b;
+        }
+        #boxOne {
+            height: 100px;
+            width: 100px;
+            background-color: #f1c40f;
+            position: static;
+            /*모든 박스는 포지션이 static이다.
+            그 엘리먼트를 거기 놓으면 거기 있을 것이다.
+            엘리먼트를 설정하면 거기 그대로 있음.*/
+        }
+        #boxTwo {
+            height: 50px;
+            width: 50px;
+            background-color: #1abc9c;
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            /*스크롤을 해도 머물러 있다. 이유는? 포지션이 픽스로 고정되어 있어서.
+            스티커처럼. 고정된 포지션이다. 네 가지 설정값도 줄 수 있다.
+            상, 하, 좌, 우 간격.*/
+        }
+        #abs-box {
+            width: 300px;
+            height: 300px;
+            background-color: #f39c12;
+            position: relative;
+            /*부모 박스에 릴렉티브를 넣어 주면 앱솔루트가 내 자식이 된다.*/
+        }
+        .abs-child {
+            width: 100px;
+            height: 100px;
+            background-color: #16a085;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            /*부모에 해당하는 박스를 찾지 못하게 되면 body를 부모로 인식한다.
+            absolute가 설정되면 해당 엘리먼트와 관계 있는 엘리먼트를 살펴보고
+            이에 상응하는 대로 움직임. 부모를 'relative'로 설정해 줄 수도 있다.*/
+        }
+    </style>
+</head>
+<body>
+
+    <!--static-->
+    <div id="boxOne">
+        <div class="box-child"></div>
+    </div>
+    <!--fixed-->
+    <div id="boxTwo">
+        <div class="box-child"></div>
+    </div>
+    <!--absolute & relative-->
+    <div id="abs-box">
+        <div class="abs-child"></div>
+    </div>
+</body>
+</html>

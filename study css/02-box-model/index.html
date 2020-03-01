@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model</title>
+    <!--CSS 붙이기 두 번째 방법. external 방법. 외부 링크를 건다.
+    장점: 간편하다. 동시에 여러 문서에게 걸어 줄 수 있음.
+    인라인에 묻힌다.-->
+    <link href="study-theory.css" rel="stylesheet" />
+    <style>
+      /*inline 방법
+        단점: 같은 배경색을 쓴다고 할 때 매번 html에 붙여 줘야 함.
+        외부 링크보다 내부 링크를 더 먼저 읽게 됨.*/
+      body,
+      html {
+        padding: 0;
+        margin: 0;
+        background-color: #16a085;
+        height: 100%;
+      }
+      .box {
+        background-color: #f1c40f;
+        width: 50%;
+        height: 50%;
+        padding: 50px 0 0 50px;
+        /*보더에서 안쪽으로의 간격: 패딩*/
+        margin: 50px 0 0 50px;
+        /*보더에서 바깥쪽으로의 간격: 마진*/
+      }
+      .inside-box {
+        background-color: #2980b9;
+        width: 50%;
+        height: 50%;
+        /*선 굵기, 스타일, 색상*/
+        border: 5px solid #c0392b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="inside-box"></div>
+    </div>
+  </body>
+</html>
