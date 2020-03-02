@@ -9,7 +9,7 @@
     ></script>
     <meta name="descirption" content="study to kakao clone class" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chats | Kakao clone</title>
+    <title>Friends | Kakao clone</title>
   </head>
   <body>
     <!--스테이터스 바-->
@@ -29,7 +29,7 @@
     <header>
       <div class="header__header_column">
         <h1 class="header__title">
-          Chats
+          Friends
         </h1>
       </div>
       <div class="header__header_column">
@@ -37,46 +37,86 @@
           <i class="fas fa-search"></i>
         </span>
         <span class="header__icon">
-          <i class="fas fa-comments"></i>
-        </span>
-        <span class="header__icon">
           <i class="fas fa-cog"></i>
         </span>
       </div>
     </header>
-    <!--메인채팅-->
-    <main class="chats">
-      <ul class="chats__list">
-        <li class="chats__chat chat">
-          <a href="chat.html">
-          <div class="chat__column">
-            <img class="chat__avatar g-avatar" src="images/avatar.png" />
-            <div class="chat__content">
-                성우
+    <!--내 프로필-->
+    <main class="friends">
+      <header class="friends__header">
+        <div class="friends__friend friend friend--lg">
+          <div class="friend__column">
+            <img
+              src="images/avatar.png"
+              alt=""
+              class="g-avatar friend__avatar"
+            />
+            <div class="friend__content">
+              <span class="friend__name">
+                옹성우
               </span>
-              <span class="chat__preview">
-                집 가.
+              <span class="friend__status">
+                즐겁게..^^
               </span>
             </div>
           </div>
-          <div class="chat__column">
-            <span class="chat__timestamp">어제</span>
+        </div>
+      </header>
+      <div class="friends__plus">
+        <h5 class="friends__title">plus friend</h5>
+        <div class="friends__friend friend">
+          <div class="friend__column">
+            <img
+              src="images/avatar.png"
+              alt=""
+              class="g-avatar friend__avatar"
+            />
+            <div class="friend__content">
+              <span class="friend__name">
+                Plus Friend
+              </span>
+            </div>
           </div>
-        </a>
+        </div>
+      </div>
+      <ul class="friends__list">
+        <h5 class="friends__title">Friends 15</h5>
+        <li class="friends__friend friend">
+          <div class="friend__column">
+            <img
+              src="images/avatar.png"
+              alt=""
+              class="g-avatar friend__avatar"
+            />
+            <div class="friend__content">
+              <span class="friend__name">
+                강다니엘
+              </span>
+              <span class="friend__status">
+                맛있다
+              </span>
+            </div>
+          </div>
+          <div class="friend__column">
+            <div class="friend__now-listening">
+              <span>WANNAONE - 활활</span>
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
         </li>
       </ul>
     </main>
-    <!--내비게이션-->
+    <!--네비게이션-->
     <nav>
       <ul class="nav__list">
         <li class="nav__list-item">
           <a href="friends.html" class="nav__list-link">
-            <i class="far fa-user"></i>
+            <i class="fas fa-user"></i>
           </a>
         </li>
         <li class="nav__list-item">
           <a href="index.html" class="nav__list-link">
-            <i class="fas fa-comment"></i>
+            <i class="far fa-comment"></i>
           </a>
         </li>
         <li class="nav__list-item">
