@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animations</title>
+    <style>
+        /*클릭 없이 그냥 실행시키고 싶다면? 애니메이션을 생성.
+        애니메이션엔 이름을 지어야 함.
+        */
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: #fed330;
+            color: #4b6584;
+            text-align: center;
+            /*그리고 위에 애니메이션이라고 적고 트랜스폼과 같이
+            무한으로 반복하고 싶다면? infinite 라고 적음 됨*/
+            animation: 5s scaleAndRotateSquare infinite ease-in-out;
+            }
+            /*키프레임은 css로 하여금 네가 애니메이션을 생성했다고 말해 줌
+            키프레임을 생성하고 애니메이션의 이름을 적으면 됨.
+            두 가지 스텝이 필요함. 프롬, 투.*/
+            /*만약, 여러 가지 효과를 내고 싶다면?
+            from-to를 쓰는 대신에, 0%-50%-100%를 쓸 수 있다.*/
+        @keyframes scaleAndRotateSquare {
+            0%{
+                /*어디서부터?*/
+                transform: none;
+            }
+            50%{
+                /*어디까지?*/
+                transform: rotate(1turn) scale(.5, .5);
+                color: white;
+            }
+            100%{
+                transform: none;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">hi</div>
+</body>
+</html>

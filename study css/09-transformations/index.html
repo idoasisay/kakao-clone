@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformations</title>
+    <style>
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: #fed330;
+            /*트랜스폼을 쓰고, 원하는 것을 쓰면 됨.
+            재미있는 부분은. 얘와 트렌지션을 섞었을 때임.*/
+            transform: rotate(20deg);
+            transition: 5s ease-in-out;
+        }
+        .box:hover {
+            background-color: #fc5c65;
+            /*트랜스폼을 여러 개 쓰고 싶을 땐 점 없이
+            그냥 띄어쓰기로 착착.*/
+            transform: rotate(5turn) scale(2);
+        }
+    </style>
+</head>
+<body>
+    <!--트랜스포메이션은 html 문저의 엘리먼트들을 변경,
+    모습이 변하는 효과를 뜻함.-->
+    <div class="box"></div>
+</body>
+</html>

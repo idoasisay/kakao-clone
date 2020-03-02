@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        .box{
+            font-size: 40px;
+            background-color: #e15f41;
+            color: #f7d794;
+            /*호버에 트랜지션을 넣어 보자. (트랜지션이란? 변화)
+            무엇을 바꾸고 싶은지, 몇 초인지, 효과는 어떤 것인지.
+            다 바꾸고 싶으면 all이라고 적음 됨.*/
+            /*트랜지션은 포커스, 액티브, 호버에서 효과적으로 적용이 됨.*/
+            transition: all .5s ease-in-out;
+        }
+        .box:active {
+            background-color: #63cdda;
+            color: #786fa6;
+        }
+    </style>
+</head>
+<body>
+    <span class="box">
+        text
+    </span>
+</body>
+</html>

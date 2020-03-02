@@ -4,8 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flex</title>
+    <style>
+        html, body{
+            height: 100%;
+        }
+        .grandma{
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: row;
+            /*wrap-reverse를 작성하면 반대 방향으로 그리드가 됨.*/
+            flex-wrap: wrap;
+        }
+        .mother {
+            /*플렉스를 사용할 땐 칠드런에 적용하지 않아. 무조건 부모 클래스에만.
+            칠드런에 뭐 안 해도 이미 애기들은 인라인 블록처럼 출력된다. 
+            플렉스를 지우는 순간 모든 게 블록으로 변함. */
+            display: flex;
+            /*박스 정의(어떻게 배치를 할까?) =>수평으로 */
+            justify-content: space-around;
+            /*아이템 정렬도 가능함.(어디에 놓을까?) => 수직으로 */
+            align-items:center;
+            /*수직으로 만들어 버림 column이 수직이라는 뜻
+            여기서 팁이, 플렉스 디렉션으로 column을 설정하면
+            저스티피콘텐트와 align items의 뜻이 바뀜. justify는 수직이 되고
+            align은 수평이 됨 그러니까 align을 center로 사용하면 얘는
+            센터에 있게 됨 (row는 디폴트임)*/
+            flex-direction: column;
+            height: 100%;
+        }
+        .father{
+            height: 100%;
+            display:flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            /*디폴트 값은 노 랩임. 폭을 무시하고 줄어듬. 그렇지만 wrap를 하게 되면
+            폭은 그대로 유지하고 아래로 내려가게 됨.*/
+            flex-wrap:wrap;
+        }
+        .box{
+            /*칠드런박스엔 아무것도 없어야 함. 엄마 말만 잘 들으면 됨.*/
+            background-color: #e84118;
+            width: 200px;
+            height: 200px;
+            /*보더를 줘도 안에서 줄어든다.
+            왜냐하면 플렉스 안에 있으니까 그 창에 맞춰서 폭이 조정됨
+            폭을 유지하고 밑으로 박스들을 떨어트리고 싶으면? flex-wrap 사용.*/
+            border: 1px solid #2f3640;
+        }
+        .boxes {
+            background-color: #e84118;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #2f3640;
+            /*모든 박스를 플렉스로 만들었음. 왜냐? 숫자를 움직이고 싶으니까.
+            여기서 1부터 10까지 거꾸로 하고 싶다면?
+            부모 박스에서 flex-direction:row-reverse해 주면 됨.
+            내가 한땀한땀 바꾸지 않아도 된다.*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #f5f6fa;
+        }
+    </style>
+
 </head>
 <body>
-    
+    <!--
+        플렉스가 등장하기 전엔 문제가 꽤 많았음.
+        많은 박스들을 옆으로 늘어트리고 싶다면?
+        되지 않았다. 밑으로 계속 향했기 때문.
+        마진으로 해결해 줘야 했는데, 굉장히 지루했고,
+        마진이 각자 다 달랐고, 자동으로 완성되는 그리드가 없었음.
+        가운데로 조정하려면? 아이폰으로 보면? 전부 다 조정해야 했다.
+        이걸 어떻게 고칠 것이냐? ==> 바로 플렉스로 가능.
+    -->
+    <div class="grandma">
+        <!--div.{$}*num <-1234원하는 만큼 숫자 써진다-->
+        <div class="boxes">1</div>
+        <div class="boxes">2</div>
+        <div class="boxes">3</div>
+        <div class="boxes">4</div>
+        <div class="boxes">5</div>
+        <div class="boxes">6</div>
+        <div class="boxes">7</div>
+        <div class="boxes">8</div>
+        <div class="boxes">9</div>
+        <div class="boxes">10</div>
+    </div>
+    <div class="father">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="mother">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
 </body>
 </html>
