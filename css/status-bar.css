@@ -1,0 +1,20 @@
+.status-bar {
+  /*요소 옆으로 정렬*/
+  position: fixed;
+  width: 100%;
+  padding: 10px 20px;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  color: #656565;
+  background-color: white;
+}
+
+.status-bar i {
+  font-size: 14px;
+}
+
+.status-bar .status-bar__battery-level {
+  margin-left: 5px;
+}

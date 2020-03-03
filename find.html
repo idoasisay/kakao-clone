@@ -7,6 +7,7 @@
       src="https://kit.fontawesome.com/7c37759201.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="css/style.css" />
     <meta name="descirption" content="study to kakao clone class" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Find | Kakao clone</title>
@@ -21,12 +22,12 @@
         <i class="fas fa-bell"></i>
         <i class="fas fa-volume-mute"></i>
         <i class="fas fa-wifi"></i>
-        <div class="status-bar__battery-level">100%</div>
+        <span class="status-bar__battery-level">100%</span>
         <i class="fas fa-battery-full"></i>
       </div>
     </div>
     <!--헤더-->
-    <header>
+    <header class="header">
       <div class="header__header_column">
         <h1 class="header__title">
           Find
@@ -78,33 +79,28 @@
             </span>
           </li>
         </ul>
-        <ul class="find__recommended">
-          <h5 class="find__title">
-            REcommend Friends
-          </h5>
-          <li class="find__friend friend">
-            <div class="friend__column">
-              <img
-                src="images/avatar.png"
-                alt=""
-                class="g-avatar friend__avatar"
-              />
-              <div class="friend__content">
-                <span class="friend__name">
-                  강다니엘
-                </span>
-              </div>
-            </div>
-            <div class="friend__column">
-              <div class="friend__add-btn">
-                <i class="fas fa-user-plus"></i>
-              </div>
-            </div>
-          </li>
-        </ul>
       </header>
+      <ul class="find__recommended">
+        <h5 class="find__title">
+          REcommend Friends
+        </h5>
+        <li class="find__friend friend">
+          <div class="friend__column">
+            <img src="images/avatar.png" alt="" class="friend__avatar" />
+            <div class="friend__content">
+              <span class="friend__name">
+                강다니엘
+              </span>
+            </div>
+          </div>
+          <div class="friend__column">
+            <div class="friend__add-btn">
+              <i class="fas fa-user-plus"></i>
+            </div>
+          </div>
+        </li>
+      </ul>
     </main>
-
     <!--네비게이션-->
     <nav>
       <ul class="nav__list">

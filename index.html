@@ -7,6 +7,7 @@
       src="https://kit.fontawesome.com/7c37759201.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="css/style.css" />
     <meta name="descirption" content="study to kakao clone class" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chats | Kakao clone</title>
@@ -21,12 +22,12 @@
         <i class="fas fa-bell"></i>
         <i class="fas fa-volume-mute"></i>
         <i class="fas fa-wifi"></i>
-        <div class="status-bar__battery-level">100%</div>
+        <span class="status-bar__battery-level">100%</span>
         <i class="fas fa-battery-full"></i>
       </div>
     </div>
     <!--헤더-->
-    <header>
+    <header class="header">
       <div class="header__header_column">
         <h1 class="header__title">
           Chats
@@ -49,20 +50,33 @@
       <ul class="chats__list">
         <li class="chats__chat chat">
           <a href="chat.html">
-          <div class="chat__column">
-            <img class="chat__avatar g-avatar" src="images/avatar.png" />
-            <div class="chat__content">
-                성우
-              </span>
-              <span class="chat__preview">
-                집 가.
-              </span>
+            <!--친구 목록에 있는 거 고대로 가지고 옴-->
+            <div class="chats__chat friend friend--lg">
+              <!--친구 목록 안에 있는 매개체들-->
+              <!--반갈죽 왼-->
+              <div class="friend__column">
+                <img
+                  src="images/avatar.png"
+                  alt=""
+                  class="m-avatar friend__avatar"
+                />
+                <div class="friend__content">
+                  <span class="friend__name">
+                    강다니엘
+                  </span>
+                  <span class="friend__bottom-text">
+                    going home!
+                  </span>
+                </div>
+              </div>
+              <!--반갈죽 오-->
+              <div class="friend__column">
+                <span class="chat__timestamp">
+                  March 8
+                </span>
+              </div>
             </div>
-          </div>
-          <div class="chat__column">
-            <span class="chat__timestamp">어제</span>
-          </div>
-        </a>
+          </a>
         </li>
       </ul>
     </main>
@@ -76,6 +90,7 @@
         </li>
         <li class="nav__list-item">
           <a href="index.html" class="nav__list-link">
+            <div class="nav__badge">8</div>
             <i class="fas fa-comment"></i>
           </a>
         </li>
