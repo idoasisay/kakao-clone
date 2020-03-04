@@ -8,6 +8,6 @@
 .friends__plus .friends__title,
 .friends__list .friends__title {
   font-size: 14px;
-  opacity: 0.6;
+  color: rgba(0, 0, 0, 0.5);
   margin-bottom: 12px;
 }

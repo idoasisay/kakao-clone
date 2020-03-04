@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 30px 0;
 }
 
 .friend .friend__avatar {
@@ -34,7 +35,7 @@
 .friend .chat__timestamp,
 .friend__content .friend__bottom-text,
 .friend__content .friend__status {
-  opacity: 0.4;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .friend__content .friend__bottom-text {
@@ -57,7 +58,7 @@
 
 .friend__now-listening span {
   margin-right: 4px;
-  opacity: 0.6;
+  color: rgba(0, 0, 0, 0.5);
 }
 .friend__now-listening i {
   color: #ea8685;

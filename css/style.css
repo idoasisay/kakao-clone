@@ -9,7 +9,17 @@
 @import "more.css";
 @import "setting.css";
 @import "chat.css";
-
+@import "mobile.css";
+body .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 20px 20px 20px;
+  margin-top: 30px;
+  background-color: white;
+  box-shadow: 0 10px 20px -12px rgba(50, 50, 93, 0.25);
+}
 * {
   box-sizing: border-box;
 }
@@ -17,6 +27,7 @@
 body {
   background-color: white;
   padding: 10px 20px;
+  margin-top: 90px;
   margin-bottom: 60px;
   color: #020202;
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -27,4 +38,21 @@ a {
   /*부모 요소로부터 색상을 받아온다*/
   color: inherit;
   text-decoration: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.5;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+main {
+  animation: fadeIn 0.5s ease-in-out;
+}
+main.chat-screen {
+  animation: none;
 }
